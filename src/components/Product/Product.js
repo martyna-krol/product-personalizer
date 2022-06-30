@@ -10,10 +10,9 @@ const Product = props => {
 
   const [currentSize, setCurrentSize] = useState(props.sizes[0].name);
 
-  const getPrice = useMemo(() => {
+  const newPrice = useMemo(() => {
     const found = props.sizes.find(element => element.name === currentSize);
-    const currentPrice = props.basePrice + found.additionalPrice;
-    return currentPrice;
+    return props.basePrice + found.additionalPrice;
   }, [currentSize, props.basePrice, props.sizes]);
 
   return (
@@ -24,10 +23,19 @@ const Product = props => {
       <div>
         <header>
           <h2 className={styles.name}>{props.title}</h2>
-          <span className={styles.price}>Price: {getPrice}$</span>
+          <span className={styles.price}>Price: {newPrice}$</span>
         </header>
 
-        <ProductForm currentSize={currentSize} currentColor={currentColor} setCurrentColor={setCurrentColor} setCurrentSize={setCurrentSize} getPrice={getPrice} title={props.title} name={props.name} sizes={props.sizes} colors={props.colors}/>
+        <ProductForm 
+        currentSize={currentSize} 
+        currentColor={currentColor} 
+        setCurrentColor={setCurrentColor} 
+        setCurrentSize={setCurrentSize} 
+        newPrice={newPrice} 
+        title={props.title} 
+        name={props.name} 
+        sizes={props.sizes} 
+        colors={props.colors}/>
 
       </div>
     </article>

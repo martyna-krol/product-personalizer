@@ -6,15 +6,12 @@ import OptionColor from '../OptionColor/OptionColor';
 
 const ProductForm = props => {
 
-
-
-
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Summary')
     console.log('==============')
     console.log('Name: ' + props.title)
-    console.log('Price: ' + props.getPrice())
+    console.log('Price: ' + props.newPrice)
     console.log('Size: ' + props.currentSize)
     console.log('Color: ' + props.currentColor)
   }
