@@ -27,15 +27,16 @@ const Product = props => {
         </header>
 
         <ProductForm 
-        currentSize={currentSize} 
-        currentColor={currentColor} 
-        setCurrentColor={setCurrentColor} 
-        setCurrentSize={setCurrentSize} 
-        newPrice={newPrice} 
-        title={props.title} 
-        name={props.name} 
-        sizes={props.sizes} 
-        colors={props.colors}/>
+          currentSize={currentSize} 
+          currentColor={currentColor} 
+          setCurrentColor={setCurrentColor} 
+          setCurrentSize={setCurrentSize} 
+          newPrice={newPrice} 
+          title={props.title} 
+          name={props.name} 
+          sizes={props.sizes} 
+          colors={props.colors}
+        />
 
       </div>
     </article>
