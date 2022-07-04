@@ -12,8 +12,8 @@ const OptionColor = props => {
         <div className={styles.colors}>
             <h3 className={styles.optionLabel}>Colors</h3>
             <ul className={styles.choices}>
-                {props.colors.map((color, index) =>
-                    <li key={index}>
+                {props.colors.map((color) =>
+                    <li key={color.name}>
                         <button 
                             type="button" 
                             onClick={() => props.setCurrentColor(color)} 
